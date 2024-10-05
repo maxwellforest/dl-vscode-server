@@ -68,6 +68,7 @@ if [ -n "${commit_sha}" ]; then
 
     printf "%s" "downloading ${archive}..."
     # Download VS Code Server tarball to tmp directory.
+    echo "https://vscode.download.prss.microsoft.com/dbazure/download/stable/${commit_sha}/vscode-server-${PLATFORM}-${ARCH}.tar.gz"
     curl -s --fail -L "https://vscode.download.prss.microsoft.com/dbazure/download/stable/${commit_sha}/vscode-server-${PLATFORM}-${ARCH}.tar.gz" -o "/tmp/${archive}"
     # Working URLs that helped derived format:
     # https://update.code.visualstudio.com/commit:b58957e67ee1e712cebf466b995adf4c5307b2bd/server-linux-x64/stable
